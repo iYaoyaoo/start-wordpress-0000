@@ -21,6 +21,7 @@ nginx -c /code/nginx.conf
 
 sleep 5
 
+
 while true
 do
     echo "check nginx and php-fpm process ...."
