@@ -36,3 +36,6 @@ do
     fi
     sleep 10
 done
+
+chmod -R 777 /mnt/auto/wordpress/
+chown -R nginx:nginx /mnt/auto/wordpress/
