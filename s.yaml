@@ -15,7 +15,7 @@
 #   有问题快来钉钉群问一下吧：33947367
 # ------------------------------------
 edition: 1.0.0
-name: start-wordpress-q5dc
+name: start-gechiui-0000
 # access 是当前应用所需要的密钥信息配置：
 # 密钥配置可以参考：https://www.serverless-devs.com/serverless-devs/command/config
 # 密钥使用顺序可以参考：https://www.serverless-devs.com/serverless-devs/tool#密钥使用顺序与规范
@@ -24,7 +24,7 @@ access: "default"
 vars: # 全局变量
   region: "cn-qingdao"
   service:
-    name: "web-framework-q5dc"
+    name: "web-framework-0000"
     description: 'Serverless Devs Web Framework Service'
     nasConfig: auto
 
@@ -43,12 +43,12 @@ services:
       #          args:                                          # 插件的参数信息
       #            testKey: testValue
       post-deploy: # 在deploy之后运行
-        - component: fc nas upload -ro code/wordpress/ /mnt/auto/wordpress
+        - component: fc nas upload -ro code/gechiui/ /mnt/auto/gechiui
     props: # 组件的属性值
       region: ${vars.region} # 关于变量的使用方法，可以参考：https://www.serverless-devs.com/serverless-devs/yaml#变量赋值
       service: ${vars.service}
       function:
-        name: "wordpress"
+        name: "gechiui"
         description: 'Serverless Devs Web Framework Function'
         codeUri: './code'
         runtime: custom

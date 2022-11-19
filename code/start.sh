@@ -4,14 +4,14 @@ set +e
 mkdir -p /tmp/log/nginx/
 mkdir -p /tmp/var/nginx/
 
-mkdir -p /mnt/auto/wordpress/cookies
-chown -R www-data:www-data /mnt/auto/wordpress/cookies
+mkdir -p /mnt/auto/gechiui/cookies
+chown -R www-data:www-data /mnt/auto/gechiui/cookies
 
-mkdir -p /mnt/auto/wordpress/sessions
-chown -R www-data:www-data /mnt/auto/wordpress/sessions
+mkdir -p /mnt/auto/gechiui/sessions
+chown -R www-data:www-data /mnt/auto/gechiui/sessions
 
-mkdir -p /mnt/auto/wordpress/wp-content/database 
-chown -R www-data:www-data /mnt/auto/wordpress/wp-content/database 
+mkdir -p /mnt/auto/gechiui/wp-content/database 
+chown -R www-data:www-data /mnt/auto/gechiui/gc-content/database 
 
 echo "start php-fpm"
 php-fpm7.4 -c /code/php.ini -y /code/php-fpm.conf
@@ -37,3 +37,9 @@ do
     fi
     sleep 10
 done
+# define("FS_METHOD", "direct");
+# define("FS_CHMOD_DIR", 0777);
+# define("FS_CHMOD_FILE", 0777);
+
+# chmod -R 777 /mnt/auto/gechiui/
+# chown -R www-data:www-data /mnt/auto/gechiui/
